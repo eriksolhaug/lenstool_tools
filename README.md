@@ -26,19 +26,13 @@ git clone https://github.com/eriksolhaug/lenstool_tools.git
 cd lenstool_tools
 ```
 
-### Set up the Conda environment
+### Set up the Python environment for lenstool_tools
 
-The code requires a Conda environment for lenstool. The environment name is specified in `lenstool_tools/.lenstool_env`:
-
-```bash
-cat lenstool_tools/.lenstool_env  # shows "lenstool_env8" (or your custom environment name)
-```
-
-Create or activate the lenstool environment (if you haven't already):
+Create a Python environment to run the lenstool_tools code:
 
 ```bash
-conda create -n lenstool_env8 -c conda-forge lenstool=6.5
-conda activate lenstool_env8
+conda create -n lenstool_tools python=3.9
+conda activate lenstool_tools
 ```
 
 ### Install the package
@@ -47,27 +41,51 @@ conda activate lenstool_env8
 pip install -e .
 ```
 
+This installs the lenstool_tools package and its Python dependencies.
+
+### Set up the Conda environment for lenstool (the binary)
+
+The code requires a **separate** Conda environment for running lenstool itself. The environment name is specified in `lenstool_tools/.lenstool_env`:
+
+```bash
+cat lenstool_tools/.lenstool_env  # shows "lenstool_env8"
+```
+
+Create the lenstool environment:
+
+```bash
+conda create -n lenstool_env8 -c conda-forge lenstool
+```
+
+If you want to use a different environment name, edit `lenstool_tools/.lenstool_env`:
+
+```bash
+echo "your_custom_env_name" > lenstool_tools/.lenstool_env
+```
+
 ## Dependencies
+
+### Two Conda environments
+
+This toolkit requires **two separate Conda environments**:
+
+1. **Python environment (e.g., `lenstool_tools`)**: For running the lenstool_tools Python code. You activate this to run the commands listed in Quick Start.
+
+2. **Lenstool environment (e.g., `lenstool_env8`)**: For running the lenstool binary. This is specified in `lenstool_tools/.lenstool_env`. The Python code automatically activates this environment when needed using `conda run`; you don't need to manually activate it.
 
 ### Lenstool
 
-This toolkit requires **lenstool 6.5** (installed in a Conda environment). 
+The lenstool binary must be installed in the environment specified in `lenstool_tools/.lenstool_env`.
 
-**Important:** Use lenstool 6.5, not 7.1.1 or later. Version 7.1.1+ may have issues with writing potential (poten) FITS files.
-
-The environment name (`lenstool_env8` by default) is read from `lenstool_tools/.lenstool_env` and used by the `run_samples` module to execute lenstool in the correct environment.
-
-### Python packages
-
-Standard scientific Python packages:
-- numpy
-- pandas
-- astropy (for FITS I/O)
-- matplotlib
 
 ## Quick Start
 
 All commands below assume you're working within a model directory (e.g., `example/`). Any CAPITALIZED names are for you to change (unless you use the provided sample files).
+
+**Prerequisite:** Activate the lenstool_tools Python environment:
+```bash
+conda activate lenstool_tools
+```
 
 ### Generate samples
 
@@ -173,6 +191,7 @@ python -m lenstool_tools.timedelay_statistics output/timedelay config/timedelays
 - Replace capitalized names (e.g., `BAYES.DAT`, `BESTOPT.PAR`) with your actual file names
 - All commands assume your model directory contains `input/`, `config/`, and `output/` subdirectories
 - Configuration files (`.json`) should be placed in the `config/` directory
-- When running commands, activate the lenstool environment first: `conda activate lenstool_env8` (or the name in `lenstool_tools/.lenstool_env`)
+- Activate the Python environment for lenstool_tools when running commands: `conda activate lenstool_tools` (or whatever you named it)
+- The `lenstool_env8` environment is used automatically by the code when calling the lenstool binary; you don't need to manually activate it
 
 **Fix**: Core radius parameters are set to `0.000001` instead of `0.0` (when core radius is set to `0.0`, i.e. turning a PIEMD model into a SIE) to prevent NaN values in potential map calculations.
