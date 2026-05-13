@@ -1,0 +1,10 @@
+#!/usr/bin/env python3
+"""
+Run lenstool on each generated sample input file
+[BACKUP FILE - OLD VERSION]
+See ARCHITECTURE_CHANGES.txt in this directory for details.
+"""
+
+# This is a backup of the old version.
+# The current version no longer runs separate sample_..._poten.par files.
+# All output (including poten) is handled by the main sample_....par files.

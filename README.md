@@ -73,9 +73,7 @@ This toolkit requires **two separate Conda environments**:
 
 2. **Lenstool environment (e.g., `lenstool_env8`)**: For running the lenstool binary. This is specified in `lenstool_tools/.lenstool_env`. The Python code automatically activates this environment when needed using `conda run`; you don't need to manually activate it.
 
-### Lenstool
-
-The lenstool binary must be installed in the environment specified in `lenstool_tools/.lenstool_env`.
+The lenstool binary must be installed in the environment specified in `lenstool_tools/.lenstool_env`. I recommend using lenstool v8.
 
 
 ## Quick Start

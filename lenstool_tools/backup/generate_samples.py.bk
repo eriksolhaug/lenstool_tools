@@ -1,0 +1,9 @@
+#!/usr/bin/env python3
+"""
+Generate individual input.par files for each sample in bayes.dat
+[BACKUP FILE - OLD VERSION WITH SEPARATE POTEN FILES]
+See ARCHITECTURE_CHANGES.txt in this directory for details.
+"""
+
+# This is a backup of the old version that created separate sample_..._poten.par files.
+# The current version includes poten output directly in the main sample_....par files.
