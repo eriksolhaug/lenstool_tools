@@ -1,0 +1,68 @@
+# Generated outputs
+output/
+output\ copy/
+sample_input\ copy/
+input_test/
+input_test_mass/
+
+# Statistics and results
+statistics/
+figures/
+
+# Temporary and backup files
+*.bk/
+*.bkpaper1/
+tmp/
+tests.bk/
+README.md.v1
+
+# Python generated files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# Generated data files (outputs from processing)
+# Keep config files but ignore generated outputs
+amplitudes.csv
+ampli.csv
+
+# Keep only if necessary - generated output files
+# These can be regenerated from the sample_input
+*.fits
+*.json output files are ok in input/config but not in output/
+
+# Notebooks (unless part of documentation)
+notebooks/
+
+# Keep .md files and essential Python files
+# Don't ignore:
+# - setup.py
+# - lenstool_tools/*.py
+# - config/ directories with .json files
+# - input/ directories with .dat and .par files
+# - All .md files
+# - single_model/ (if used for testing)
