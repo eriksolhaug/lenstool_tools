@@ -121,6 +121,8 @@ python -m lenstool_tools.run_samples sample_input output -workdir . -redshift 1.
 
 ### Extract magnifications
 
+Please change any parameters in the configuration files.
+
 ```bash
 python -m lenstool_tools.extract_magnifications config/MAGNIFICATION_CONFIG.json MAGNIFICATIONS.csv
 ```
@@ -131,6 +133,10 @@ python -m lenstool_tools.extract_magnifications config/magnification1.524_config
 ```
 
 ### Produce magnification statistics
+
+Replace the redshift with the redshift of your source. The magnification depends on this redshift. Set the desired uncertainty interval with the `-sigma` flag, i.e. 1 corresponds to a 1(\sigma), or rather, the 16th-84th percentile.
+
+Also, check the configuration file and change the parameters to the parameter of your field (e.g. image coordinates must be specified here).
 
 ```bash
 python -m lenstool_tools.magnification_statistics MAGNIFICATIONS.csv -redshift 1.524 -sigma 1.0 -ampli output/ampli -config config/MAGNIFICATION_CONFIG.json
@@ -143,6 +149,8 @@ python -m lenstool_tools.magnification_statistics magnifications1.524.csv -redsh
 
 ### Produce mass statistics
 
+Please change any parameters in the configuration files. The `-redshift` flag should be set to the redshift of the lens.
+
 ```bash
 python -m lenstool_tools.mass_statistics output/mass config/MASS_CONFIG.json -redshift 0.4301 -sigma 1.0
 ```
@@ -153,6 +161,8 @@ python -m lenstool_tools.mass_statistics output/mass config/mass_config.json -re
 ```
 
 ### Extract time delays
+
+Please change any parameters in the configuration files.
 
 ```bash
 python -m lenstool_tools.extract_timedelays output/poten config/TIMEDELAYS_CONFIG.json -output output/timedelay -z 1.524
@@ -165,6 +175,8 @@ python -m lenstool_tools.extract_timedelays output/poten config/timedelays_z1.52
 
 ### Plot time delay maps
 
+Please change any parameters in the configuration files.
+
 ```bash
 python -m lenstool_tools.plot_sample_timedelays output/timedelay config/TIMEDELAYS_CONFIG.json -output statistics/timedelay/timedelay_maps -z 1.524
 ```
@@ -175,6 +187,8 @@ python -m lenstool_tools.plot_sample_timedelays output/timedelay config/timedela
 ```
 
 ### Produce time delay statistics
+
+Please change any parameters in the configuration files.
 
 ```bash
 python -m lenstool_tools.timedelay_statistics output/timedelay config/TIMEDELAYS_CONFIG.json -output statistics/timedelay -z 1.524
