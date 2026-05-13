@@ -15,6 +15,7 @@ figures/
 tmp/
 tests.bk/
 README.md.v1
+ARCHITECTURE_CHANGES.txt
 
 # Python generated files
 __pycache__/
