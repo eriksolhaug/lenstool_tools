@@ -62,7 +62,15 @@ notebooks/
 # Root-level Python scripts (except setup.py)
 /*.py
 !/setup.py
-dec19a_model_solhaug/
+
+# Example directory - exclude image data and top-level configs
+example/input/*.fits
+example/input/*.jpg
+example/input/*.png
+example/input/fits/
+example/*.json
+
+# Model directories (local analysis results)
 dec19a_model_solhaug_firsthalf/
 dec19a_model_solhaug_rerun/
 dec28c_model_solhaug/
