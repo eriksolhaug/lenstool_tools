@@ -1,0 +1,71 @@
+{
+  "cosmology": {
+    "z_lens": 0.4301,
+    "z_source": 1.939,
+    "D_l_Mpc": 1157.324244,
+    "D_s_Mpc": 1732.065706,
+    "D_ls_Mpc": 1168.918580
+  },
+  "leading_image_name": "2C",
+  "reference_coord": [178.3302510, 7.9325180],
+  "source_plane_coords": "infer_from_source.dat",
+  "source_dat_directory": "output/selected_output",
+  "image_locations": {
+    "2A": [178.3305175, 7.9271795],
+    "2B": [178.3288879, 7.9276377],
+    "2C": [178.3249392, 7.9318063]
+  },
+  "image_colors": {
+    "2A": "black",
+    "2B": "black",
+    "2C": "black"
+  },
+  "image_markers": {
+    "2A": "x",
+    "2B": "x",
+    "2C": "x"
+  },
+  "image_offsets": {
+    "2A": [10, 5],
+    "2B": [10, -25],
+    "2C": [10, 0]
+  },
+  "image_object_ids": ["2A", "2B", "2C"],
+  "contours": {
+    "levels": [100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300, 1400, 1500, 1600, 1700],
+    "label_levels": [200, 800, 1200],
+    "color": "tab:blue"
+  },
+  "display": {
+    "lw_base": 1.0,
+    "lw_step": 0.001,
+    "lw_invert": true,
+    "center_str": "11h53m19.2829s +07d55m56.241s",
+    "half_size_arcsec": 60.0,
+    "max_legend_entries": 6
+  },
+  "legends": {
+    "redshift_location": "upper right",
+    "redshift_bbox_to_anchor": null,
+    "contour_location": "lower left",
+    "contour_bbox_to_anchor": [0.02, -0.01]
+  },
+  "panel_annotations": {
+    "panel_1": {
+      "redshift": {
+        "z": 1.939
+      }
+    }
+  },
+  "quasar_annotations": [
+    {
+      "id": "2A"
+    },
+    {
+      "id": "2B"
+    },
+    {
+      "id": "2C"
+    }
+  ]
+}
