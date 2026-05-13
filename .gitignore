@@ -59,7 +59,9 @@ ampli.csv
 # Notebooks (unless part of documentation)
 notebooks/
 
-# Model directories (local analysis results)
+# Root-level Python scripts (except setup.py)
+/*.py
+!/setup.py
 dec19a_model_solhaug/
 dec19a_model_solhaug_firsthalf/
 dec19a_model_solhaug_rerun/
