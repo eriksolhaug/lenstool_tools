@@ -1,0 +1,25 @@
+{
+  "description": "Configuration for extracting magnifications from amplification maps",
+  "amplification": {
+    "name": "ampli",
+    "float1": 1.939,
+    "directory": "../dec19a_model_solhaug/output/ampli"
+  },
+  "objects": [
+    {
+      "object_id": "B1",
+      "ra": 178.3305175,
+      "dec": 7.9271795
+    },
+    {
+      "object_id": "B2",
+      "ra": 178.3288879,
+      "dec": 7.9276377
+    },
+    {
+      "object_id": "B3",
+      "ra": 178.3249392,
+      "dec": 7.9318063
+    }
+  ]
+}
