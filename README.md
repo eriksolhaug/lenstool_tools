@@ -54,7 +54,8 @@ cat lenstool_tools/.lenstool_env  # shows "lenstool_env8"
 Create the lenstool environment:
 
 ```bash
-conda create -n lenstool_env8 -c conda-forge lenstool
+conda create -n lenstool_env8
+# Then download lenstool in this environment
 ```
 
 If you want to use a different environment name, edit `lenstool_tools/.lenstool_env`:
